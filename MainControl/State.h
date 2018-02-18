@@ -12,9 +12,11 @@ typedef void (*CallBackFunction)();
 
 struct StateParam{
   int value;
-  CallBackFunction handler;
-  
+  CallBackFunction upHandler;
+  CallBackFunction downHandler; 
 };
+
+
 
 class State{
 
@@ -23,8 +25,10 @@ class State{
       void init();
       
 
-    private:
+    private:      
       StateParam stateParams[7];
       
  
 };
+
+

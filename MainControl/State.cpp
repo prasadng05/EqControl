@@ -1,10 +1,15 @@
 #include "State.h"
+#include "AudioCtrl.h"
 
 State::State(){}
 
 void State::init(){
   
     stateParams[VOLUME].value = 5;
-    stateParams[VOLUME].handler = {};
+    stateParams[VOLUME].upHandler = volumeUP;
+    stateParams[VOLUME].downHandler = volumeDown;
       
 }
+
+
+
